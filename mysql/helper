@@ -1,0 +1,16 @@
+
+# Create image
+
+docker build -t pjimages001/mysql:5.6_001 .
+
+# Start Database
+
+docker run -d --name="mysqlpj" pjimages001/mysql:5.6_001
+
+# Test Connection
+
+mysql -upjadmin -h 172.17.0.2 -pnewpassword -Dpjimages
+
+# Import Database from Dump file
+
+docker exec -i mysqlpj mysql -upjadmin -pnewpassword --database=pjimages < ./pj-images.sql
