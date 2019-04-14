@@ -9,8 +9,3 @@ ENV MYSQL_USER pjadmin
 ENV MYSQL_PASSWORD newpassword
 
 # Import Data
-
-
-
-
-

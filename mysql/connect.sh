@@ -1,1 +1,1 @@
-mysql -upjadmin -h 172.17.0.2 -pnewpassword -Dpjimages
+mysql -upjadmin -h 192.168.200.2 -pnewpassword -Dpjimages
