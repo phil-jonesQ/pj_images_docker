@@ -1,0 +1,158 @@
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 60%;
+  position: relative;
+  margin-top:30px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: inherit;
+  padding: 32px;
+  margin-top: -42px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  position: absolute;
+  font-size: 15px;
+  font-weight:600;
+  padding: 8px 12px;
+  bottom: 8px;
+  text-align: right;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+a.text:hover {
+  text-decoration: none;
+/*  background:#004bcb; */
+  color: #004bcb;
+  font-weight:600;
+  transition:all 0.99s;
+  opacity:0.9;
+  filter:alpha (opacity=90);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 2.5s;
+  animation-fill-mode:forwards;
+  -moz-animation-name: fade;
+  -moz-animation-duration: 2.5s;
+  -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (min-width: 300px) and (max-width: 1024px) {
+  .prev, .next,.text {font-size: 8px}
+}
+
+
+/* On smaller screens, make slide show bigger */
+
+@media only screen and (min-width: 200px) and (max-width: 1024px) {
+
+   .slideshow-container {max-width: 95%} 
+   
+}
+
+
+/* On smaller screens, make slide show smaller for landscape (it's now good looking at this site in landscape on mobile device) */
+
+
+@media only screen and (min-width: 200px) and (max-width: 640px) and (orientation : landscape) {
+   .slideshow-container {
+    max-width: 35%;
+    position: relative;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+  .prev, .next,.text {font-size: 6px}
+  .dot {
+  cursor:pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1024px) and (orientation : landscape) {
+  .prev, .next,.text {font-size: 12px}
+}
+

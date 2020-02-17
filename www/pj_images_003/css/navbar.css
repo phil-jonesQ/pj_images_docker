@@ -1,0 +1,146 @@
+body {
+ background: #020202;
+ height:100%;
+}
+
+#Nav {
+  background: #020202;
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+}
+
+
+#NavWrapper {
+    height: 150px;
+    width: 85%;
+    background: #464c44;
+    margin-left:auto;
+    margin-right:auto;
+    opacity:0.475;
+    filter:alpha (opacity=70); /*IE8 earlier */
+}
+
+#NavWrapper ul li {
+  list-style:none;
+  display:inline-block;
+  font-weight: bold;
+  padding:10px;
+}
+
+#NavWrapper a {
+  color: white;
+  text-decoration: none;
+}
+
+#NavWrapper ul li:hover {
+  background:#004bcb;
+  transition:all 0.99s;
+  opacity:0.9;
+  filter:alpha (opacity=70);
+}
+
+ p {
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;  
+  }
+  .margin {margin-bottom: 10px;}
+  .bg-1 { 
+      color: #ffffff;
+  }
+  .bg-2 {
+      background:rgba(50,50,50,0.1);  
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background:rgba(50,50,50,0.1); 
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  
+  .navbar {
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 22px;
+      letter-spacing: 3px;
+  }
+  
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+ 
+ 
+@media only screen and (min-width: 1025px) and (max-width: 1500px) {
+  .navbar {
+    font-size: 14px;
+  }
+}
+ 
+
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  .navbar {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 769px) {
+  .navbar {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 380px) and (orientation : portrait) {
+  .navbar {
+    font-size: 8px;
+    letter-spacing: 0px;
+  }
+  #Nav #NavWrapper {
+   padding:0px;
+   }
+  #NavWrapper ul {
+  width:85%;
+  text-align:center;
+   }
+}
+
+/* IPAD */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .navbar {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 640px) and (orientation : landscape) {
+  .navbar {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+}
+
+/* Attempt mobile fix */
+@media only screen and (max-width: 640px) and (orientation : landscape) {
+   #NavWrapper {
+    height:90px;
+    width:80%;
+  }
+   
+  #Nav {
+  height:120px;
+  }
+}
+
+
+

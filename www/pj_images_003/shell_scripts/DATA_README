@@ -1,0 +1,36 @@
+### Json object (giant array) - single elemennt example
+  "FileName": "Wondering_Lonely_1_of_1.jpg",
+  "Make": "NIKON CORPORATION",
+  "Model": "NIKON D7000",
+  "ExposureProgram": "Aperture-priority AE",
+  "ISO": 100,
+  "CreateDate": "2014:02:02 13:46:11",
+  "FocalLength": "18.0 mm",
+  "Aperture": 16.0,
+  "ImageSize": "4597x3045",
+  "ShutterSpeed": "1/320",
+  "Category": "Landscape",
+  "IsGetty": false,
+  "IsHDR": false,
+  "IsBW": false,
+  "pjRank": 100
+
+##Create assets table schema v2
+
+CREATE TABLE assets (id INT NOT NULL AUTO_INCREMENT,imageTitle VARCHAR(128),filename VARCHAR(512), cameraMake VARCHAR (20), cameraModel VARCHAR (20), exposureProgram VARCHAR (20),
+iso INT, creationDate DATETIME, focalLength VARCHAR(10), aperture FLOAT, imageSize VARCHAR (15), shutterSpeed VARCHAR (10),
+category VARCHAR(20),isGetty BOOL, isHDR BOOL, isBW BOOL, pjRank INT,views INT,timestamp TIMESTAMP,PRIMARY KEY (id));
+
+
+
+#Example insert
+
+INSERT INTO assets VALUES (0,"Title Not Defined","TestImage4.jpg","Nikon","D700","AE",100,'2013:06:22 14:05:48',"28mm",16.0,"4597x3045","1/320","Landscape",0,1,9,100,0,now());
+
+#Asset Description Table
+
+CREATE TABLE asset_description (id INT NOT NULL AUTO_INCREMENT,assets_id INT,description VARCHAR(1024),PRIMARY KEY (id));
+
+#User Login Table - version 3 feature
+
+

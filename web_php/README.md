@@ -1,1 +1,0 @@
-# pj_images_docker

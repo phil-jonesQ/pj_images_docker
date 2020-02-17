@@ -1,7 +1,0 @@
-##
-
-Run start to start the docker containers and pj-images.com can be accessed on port 80 --> http://172.17.0.3/show.php?category=Home
-
-Run stop to shutdown the docker containers
-
-Added to git
