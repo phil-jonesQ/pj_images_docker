@@ -2,7 +2,7 @@
 
 who_am_i=$(whoami)
 
-if [ $who_am_i != "root" ] ; then
+if [ $who_am_i != "philipjones" ] ; then
         echo "Error: Must be run as root!"
         exit 2
 fi
@@ -24,7 +24,7 @@ echo -n ".."
 if [ $started -eq 2 ] ; then
         echo ""
         echo "pjimages has stopped..."
-        [ -e /var/run/pjimages ] && rm -f /var/run/pjimages
+        sudo [ -e /var/run/pjimages ] && sudo rm -f /var/run/pjimages
 else
         echo "pjimages failed to stop..."
 fi
