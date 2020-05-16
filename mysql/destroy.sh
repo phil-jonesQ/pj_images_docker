@@ -1,8 +1,9 @@
 #!/bin/bash
 
-docker_run_name="pjmysql001"
-docker_image_name="pjimages001\/mysql"
-docker_image_id=$(docker images  | grep "pjimages001\/mysql" | awk '{print $3}')
+docker_container_name="pjmysql"
+docker_run_name=$(docker ps | grep $docker_container_name | awk '{print $1}')
+docker_image_name="pj_images_sql"
+docker_image_id=$(docker images  | grep $docker_image_name | awk '{print $3}')
 
 
 echo "Removing container instance $docker_run_name"

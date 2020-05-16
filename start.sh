@@ -8,7 +8,7 @@ if [ -e /var/run/pjimages ] ; then
        	exit 2
 fi
 
-if [ $who_am_i != "philipjones" ] ; then
+if [ $who_am_i != "philjones" ] ; then
 	echo "Error: Must be run as root!"
 	exit 2
 fi
